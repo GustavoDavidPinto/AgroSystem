@@ -1,114 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="template/css/styleIndex.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroGestor - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <span>🌿</span> AgroGestor
-        </div>
-        <div>🔔</div>
-    </header>
 
-    <main>
-        <div class="title-row">
-            <h1>Visão Geral</h1>
-            <div class="date">05 de out de 2026</div>
-        </div>
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar">
+    <div class="logo">
+      <span>🌿</span>
+      <span>AgroGestor</span>
+    </div>
 
-        <!-- Cards resumo -->
-        <div class="card">
-            <div class="icon">🏠</div>
-            <div class="info">
-                <h3>Total de propriedades</h3>
-                <p>2</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="icon">📦</div>
-            <div class="info">
-                <h3>Total de talhões</h3>
-                <p>8</p>
-            </div>
-        </div>
-
-        <!-- Alerta -->
-        <div class="alert">
-            <div class="icon">⚠️</div>
-            <div>3 insumos com estoque baixo</div>
-        </div>
-
-        <!-- Lista -->
-        <div class="section-title">
-            <span>Itens com estoque baixo</span>
-            <a href="#">Ver todos ›</a>
-        </div>
-
-        <div class="item">
-            <div class="left">
-                <div class="icon">📦</div>
-                <div>
-                    <div class="name">Ureia</div>
-                    <div class="qty">50 kg restantes</div>
-                </div>
-            </div>
-            <div class="badge">Baixo estoque</div>
-        </div>
-
-        <div class="item">
-            <div class="left">
-                <div class="icon">🧴</div>
-                <div>
-                    <div class="name">Glifosato</div>
-                    <div class="qty">12 L restantes</div>
-                </div>
-            </div>
-            <div class="badge">Baixo estoque</div>
-        </div>
-
-        <div class="item">
-            <div class="left">
-                <div class="icon">🌱</div>
-                <div>
-                    <div class="name">Semente Soja</div>
-                    <div class="qty">320 kg restantes</div>
-                </div>
-            </div>
-            <div class="badge">Baixo estoque</div>
-        </div>
-    </main>
-
-    <!-- Menu inferior -->
     <nav>
-        <a href="#" class="active">
-            <span>🏠</span>
-            Home
-        </a>
-        <a href="#">
-            <span>📦</span>
-            Estoque
-        </a>
-        <a href="#">
-            <span>🧪</span>
-            Aplicações
-        </a>
-        <a href="#">
-            <span>📋</span>
-            Histórico
-        </a>
-        <a href="#">
-            <span>👤</span>
-            Perfil
-        </a>
+      <a href="index.html" class="active">
+        <span class="icon">🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <a href="#">
+        <span class="icon">🏡</span>
+        <span>Propriedades</span>
+      </a>
+      <a href="#">
+        <span class="icon">📦</span>
+        <span>Estoque</span>
+      </a>
+      <a href="#">
+        <span class="icon">🧪</span>
+        <span>Aplicações</span>
+      </a>
+      <a href="#">
+        <span class="icon">📋</span>
+        <span>Histórico</span>
+      </a>
+      <a href="#">
+        <span class="icon">📊</span>
+        <span>Relatórios</span>
+      </a>
+      <a href="#">
+        <span class="icon">⚙️</span>
+        <span>Configurações</span>
+      </a>
     </nav>
-</body>
 
+    <div class="user">
+      <div class="avatar">PR</div>
+      <div class="info">
+        <strong>Produtor Rural</strong>
+        <span>Fazenda Esperança</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+  <main class="main">
+
+    <div class="page-header">
+      <h1>Visão Geral</h1>
+      <div class="date">📅 06 de outubro de 2026</div>
+    </div>
+
+    <!-- Cards de resumo -->
+    <div class="cards-row">
+      <div class="card">
+        <div class="icon">🏠</div>
+        <div class="info">
+          <h3>Total de propriedades</h3>
+          <p>2</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">📦</div>
+        <div class="info">
+          <h3>Total de talhões</h3>
+          <p>8</p>
+        </div>
+      </div>
+
+      <div class="card alert-card">
+        <div class="icon alert-icon">⚠️</div>
+        <div class="info">
+          <h3>Insumos com estoque baixo</h3>
+          <p>3</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de estoque baixo -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Itens com estoque baixo</h2>
+        <a href="#">Ver todos →</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Insumo</th>
+            <th>Tipo</th>
+            <th>Saldo atual</th>
+            <th>Status</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="item-name">
+                <div class="item-icon">📦</div>
+                Ureia
+              </div>
+            </td>
+            <td>Fertilizante</td>
+            <td>50 kg</td>
+            <td><span class="badge baixo">Baixo</span></td>
+            <td><button class="btn-action">Repor</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-name">
+                <div class="item-icon">🧴</div>
+                Glifosato
+              </div>
+            </td>
+            <td>Defensivo</td>
+            <td>12 L</td>
+            <td><span class="badge baixo">Baixo</span></td>
+            <td><button class="btn-action">Repor</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-name">
+                <div class="item-icon">🌱</div>
+                Semente Soja
+              </div>
+            </td>
+            <td>Semente</td>
+            <td>320 kg</td>
+            <td><span class="badge baixo">Baixo</span></td>
+            <td><button class="btn-action">Repor</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-name">
+                <div class="item-icon">📦</div>
+                MAP
+              </div>
+            </td>
+            <td>Fertilizante</td>
+            <td>1.320 kg</td>
+            <td><span class="badge ok">OK</span></td>
+            <td><button class="btn-action">Detalhes</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+</body>
 </html>
