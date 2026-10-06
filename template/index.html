@@ -5,28 +5,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <link rel="stylesheet" href="template/css/styleIndex.css">
+
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="logo">
+            <span>🌿</span> AgroGestor
+        </div>
+        <div>🔔</div>
     </header>
 
     <main>
-        <h1>Welcome to the Index Page</h1>
-        <p>This is a sample index page.</p>
+        <div class="title-row">
+            <h1>Visão Geral</h1>
+            <div class="date">05 de out de 2026</div>
+        </div>
+
+        <!-- Cards resumo -->
+        <div class="card">
+            <div class="icon">🏠</div>
+            <div class="info">
+                <h3>Total de propriedades</h3>
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">📦</div>
+            <div class="info">
+                <h3>Total de talhões</h3>
+                <p>8</p>
+            </div>
+        </div>
+
+        <!-- Alerta -->
+        <div class="alert">
+            <div class="icon">⚠️</div>
+            <div>3 insumos com estoque baixo</div>
+        </div>
+
+        <!-- Lista -->
+        <div class="section-title">
+            <span>Itens com estoque baixo</span>
+            <a href="#">Ver todos ›</a>
+        </div>
+
+        <div class="item">
+            <div class="left">
+                <div class="icon">📦</div>
+                <div>
+                    <div class="name">Ureia</div>
+                    <div class="qty">50 kg restantes</div>
+                </div>
+            </div>
+            <div class="badge">Baixo estoque</div>
+        </div>
+
+        <div class="item">
+            <div class="left">
+                <div class="icon">🧴</div>
+                <div>
+                    <div class="name">Glifosato</div>
+                    <div class="qty">12 L restantes</div>
+                </div>
+            </div>
+            <div class="badge">Baixo estoque</div>
+        </div>
+
+        <div class="item">
+            <div class="left">
+                <div class="icon">🌱</div>
+                <div>
+                    <div class="name">Semente Soja</div>
+                    <div class="qty">320 kg restantes</div>
+                </div>
+            </div>
+            <div class="badge">Baixo estoque</div>
+        </div>
     </main>
 
-
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
+    <!-- Menu inferior -->
+    <nav>
+        <a href="#" class="active">
+            <span>🏠</span>
+            Home
+        </a>
+        <a href="#">
+            <span>📦</span>
+            Estoque
+        </a>
+        <a href="#">
+            <span>🧪</span>
+            Aplicações
+        </a>
+        <a href="#">
+            <span>📋</span>
+            Histórico
+        </a>
+        <a href="#">
+            <span>👤</span>
+            Perfil
+        </a>
+    </nav>
 </body>
 
 </html>
